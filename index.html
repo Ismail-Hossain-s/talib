@@ -17,45 +17,53 @@
         .navbar-item input.input {
             max-width: 250px;
         }
+
+        @media (max-width: 768px) {
+            .mobile-nav-layout {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+
+            .mobile-nav-layout>div {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .mobile-form-container {
+                justify-content: center !important;
+            }
+        }
     </style>
 </head>
 
+
 <body>
     <!-- Navbar -->
-    <nav class="navbar is-light" role="navigation" aria-label="main navigation" style="background-color: #1a73e8; text-wrap-style: auto;">
-        <div class="navbar-brand" style="padding-left: 1rem;">
-            <div class="navbar-item has-text-weight-medium has-text-dark is-size-5-mobile is-size-4-tablet" style="
-                font-size: 1.1rem;
-                color: #333333;
-                font-weight: 500;
-              
-            ">
-                If you want a personal website like this within minutes,
-                <strong style="color: #ffffff; margin-left: 0.3rem;">
-                    Join the waitlist: <span>and Discord <a href="https://discord.gg/Jupfm5zyNf"
-                            style="color: #ffffff;" target="_blank" rel="noopener noreferrer">Server</a></span>
-                </strong>
-            </div>
+    <nav role="navigation" aria-label="main navigation"
+        style="background-color: #ffffff; padding: 0.75rem 1rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); width: 100%; box-sizing: border-box; position: sticky; top: 0; z-index: 1000;"
+        class="mobile-nav-layout">
+        <div
+            style="flex: 0 0 auto; min-width: 0; padding: 0; font-size: clamp(0.8rem, 2.5vw, 1rem); color: #1f2a44; font-weight: 600; font-family: 'Inter', sans-serif;">
+            Build your site like this within minutes! <strong style="color: #4f46e5; margin-left: 0.3rem;"><a
+                    href="https://discord.gg/Jupfm5zyNf" style="color: #4f46e5; text-decoration: underline;"
+                    target="_blank" rel="noopener noreferrer">Join waitlist/Discord</a></strong>
         </div>
-
-        <div class="navbar-menu is-active">
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <form id="form" class="is-flex" style="gap: 10px;">
-                        <input class="input" type="email" placeholder="Your Email" name="Email" required
-                            style="background-color: #f5f5f5; color: #333333;" />
-                        <button class="button is-primary" type="submit" id="submit-button"
-                            style="background-color: #00c4b4; color: #ffffff; border: none;  font-weight: 600; transition: background-color 0.3s;">
-                            Join Waitlist
-                        </button>
-                        <button
-                            style="border-radius: 10px; background-color: #041091; color: #ffffff; border: none; transition: background-color 0.3s;">
-                            <a href="https://discord.gg/Jupfm5zyNf" style="color: #ffffff; font-weight: 800; text-decoration: none;"
-                                target="_blank" rel="noopener noreferrer">Discord</a>
-                        </button>
-                    </form>
-                </div>
-            </div>
+        <div style="flex: 0 0 auto; display: flex; justify-content: flex-end; min-width: 0; padding: 0; gap: 6px;"
+            class="mobile-form-container">
+            <form id="form" style="display: flex; gap: 6px; align-items: center;">
+                <input type="email" placeholder="Your Email" name="Email" required
+                    style="background-color: #f8fafc; color: #1f2a44; padding: 0.5rem 0.75rem; border-radius: 6px; border: 1px solid #e2e8f0; width: 100%; max-width: 160px; min-width: 120px; font-size: clamp(0.75rem, 2vw, 0.9rem); font-family: 'Inter', sans-serif; transition: border-color 0.3s; box-sizing: border-box;">
+                <button type="submit" id="submit-button"
+                    style="background-color: #4f46e5; color: #ffffff; border: none; font-weight: 600; padding: 0.5rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: clamp(0.75rem, 2vw, 0.9rem); font-family: 'Inter', sans-serif; transition: background-color 0.3s, transform 0.2s; white-space: nowrap;">Join
+                    Waitlist</button>
+                <button
+                    style="background-color: #6b7280; color: #ffffff; border: none; padding: 0.5rem 0.75rem; border-radius: 6px; cursor: pointer; font-size: clamp(0.75rem, 2vw, 0.9rem); font-family: 'Inter', sans-serif; transition: background-color 0.3s, transform 0.2s; white-space: nowrap;">
+                    <a href="https://discord.gg/Jupfm5zyNf"
+                        style="color: #ffffff; font-weight: 600; text-decoration: none;" target="_blank"
+                        rel="noopener noreferrer">Discord</a>
+                </button>
+            </form>
         </div>
     </nav>
 
